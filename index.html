@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS Assignment 49-52 (Events)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <h1>JavaScript Assignment (49–52) - Events</h1>
+
+  </header>
+
+  <main class="container">
+
+    <!-- ===== Task 1: Signup Form ===== -->
+    <section class="card">
+      <h2>1) Signup Form (Submit → Show Data)</h2>
+
+      <form id="signupForm" class="form">
+        <div class="grid">
+          <div class="field">
+            <label for="suName">Full Name</label>
+            <input type="text" id="suName" placeholder="Enter name" required />
+          </div>
+
+          <div class="field">
+            <label for="suEmail">Email</label>
+            <input type="email" id="suEmail" placeholder="Enter email" required />
+          </div>
+
+          <div class="field">
+            <label for="suPassword">Password</label>
+            <input type="password" id="suPassword" placeholder="Enter password" required />
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+      <div id="signupResult" class="result hidden"></div>
+    </section>
+
+    
+    <section class="card">
+ 
+
+      <div class="item">
+        <h3>Product: Wireless Headphones</h3>
+        <p>
+          <span class="short">
+            High-quality sound with comfortable design...
+          </span>
+          <span id="moreText" class="more hidden">
+            These headphones feature noise cancellation, 30-hour battery life,
+            fast charging, and a premium build for daily use.
+          </span>
+        </p>
+
+        <button id="readMoreBtn" class="btn btn-outline">Read more</button>
+      </div>
+    </section>
+
+  
+    <section class="card">
+
+
+      <!-- Add Student Form -->
+      <form id="studentForm" class="form">
+        <div class="grid">
+          <div class="field">
+            <label for="stName">Student Name</label>
+            <input type="text" id="stName" placeholder="e.g. Ali" required />
+          </div>
+
+          <div class="field">
+            <label for="stRoll">Roll No</label>
+            <input type="text" id="stRoll" placeholder="e.g. 101" required />
+          </div>
+
+          <div class="field">
+            <label for="stClass">Class</label>
+            <input type="text" id="stClass" placeholder="e.g. Web & App" required />
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Add Student</button>
+      </form>
+
+      <!-- Hidden Edit Form -->
+      <div id="editBox" class="edit-box hidden">
+        <h3>Edit Student</h3>
+
+        <form id="editForm" class="form">
+          <div class="grid">
+            <div class="field">
+              <label for="edName">Student Name</label>
+              <input type="text" id="edName" required />
+            </div>
+
+            <div class="field">
+              <label for="edRoll">Roll No</label>
+              <input type="text" id="edRoll" required />
+            </div>
+
+            <div class="field">
+              <label for="edClass">Class</label>
+              <input type="text" id="edClass" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <button type="submit" class="btn">Update</button>
+            <button type="button" id="cancelEdit" class="btn btn-outline">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Table -->
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Roll No</th>
+              <th>Class</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="studentTbody">
+            <!-- rows by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Made for SMIT Assignment 49–52 (JS Events)</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
